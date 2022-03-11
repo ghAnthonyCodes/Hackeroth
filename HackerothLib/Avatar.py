@@ -11,6 +11,7 @@ class Avatar:
 
    def __init__(self, name, friendly=True):
       self.name = name
+      self.xCoord = np.random.randint(50)
       self.level = 1
       self.needed = 50
       self.xp = 0
@@ -23,6 +24,7 @@ class Avatar:
       self.energyRegen = 0.25 # % Energy per second
       self.friendly = friendly
       self.critChance = 0.15
+      self.piece = name[0]
 
       # Ability
       self.punchCd = 1.0

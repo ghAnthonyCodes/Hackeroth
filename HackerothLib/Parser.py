@@ -1,7 +1,7 @@
 import requests
 import numpy as np
 
-RATELIMIT = False
+RATELIMIT = True
 
 class Parser:
 
@@ -22,7 +22,7 @@ class Parser:
       self.additions = 0
       self.deletions = 0
       self.total = 0
-      for repo in ['TopCoder', 'CodeChef']:
+      for repo in self.repos:
          baseUrl = 'https://api.github.com/repos/%s/%s/commits' % (self.user, repo)
          print(baseUrl)
          response = requests.get(baseUrl)
