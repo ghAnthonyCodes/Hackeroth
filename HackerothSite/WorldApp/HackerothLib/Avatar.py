@@ -1,7 +1,10 @@
 import math
 import time
-from termcolor import colored
+# from termcolor import colored
 import numpy as np
+
+def colored(m, a):
+   return m
 
 XP_CURVE = 1.055
 HP_CURVE = 1.03
